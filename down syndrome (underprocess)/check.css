@@ -1,0 +1,496 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('solvealt.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styling for the navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 8%; /* Adjust the padding as needed */
+    position: fixed;
+    top: 0; /* Position it at the top of the viewport */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background, adjust as needed */
+    color: #ffffff; /* Text color */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    letter-spacing: 1px; 
+    text-shadow: #000000 12px -24px 20px;
+}
+
+/* Styling for the span inside the logo */
+.logo span {
+    color: #f9004d; /* Color for the span text */
+}
+/* Styling for navigation links */
+nav ul {
+    list-style: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Align list items horizontally */
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 25px; /* Adjust padding as needed */
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #f9004d;
+    transition: color 0.4s;
+}
+
+/* Styling for the navigation button */
+.btn {
+    background-color: #f9004d;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+/* Content Section */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    color: #ffffff;
+    margin: 20px 0px 20px;
+    font-size: 25px;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+h4 {
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+/* Newsletter */
+.newsletter form {
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+
+.newsletter form input:first-child {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #eee;
+    outline: none;
+    border-radius: 30px;
+}
+
+.newsletter form input:last-child {
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #f9004d;
+    color: #ffffff;
+    box-shadow: 0px 0px 5px #f9004d, 0px 0px 15px #f9004d;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+}
+
+.About {
+    position: relative;
+    background-color: #191919;
+    height: 100vh; /* Ensures the section takes up full viewport height */
+}
+
+/* General styling for corner boxes */
+.About .corner-box {
+    position: absolute; /* Absolute positioning to place boxes in corners */
+    width: 450px; /* Increased width */
+    height: 200px; /* Increased height */
+    background-color: #f9004d; /* Semi-transparent background */
+    color: #fff; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Text weight */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth transition for transform and opacity */
+    opacity: 100; /* Default opacity */
+}
+
+/* Hover effect */
+.About .corner-box:hover {
+    transform: scale(1.5); /* Enlarge the hovered box */
+    z-index: 10; /* Bring the hovered box above the others */
+    opacity: 1; /* Full opacity for the hovered box */
+}
+
+/* Scale down and reduce opacity of other boxes when hovering over one */
+.About .corner-box:hover ~ .corner-box,
+.About .corner-box:hover ~ .corner-box {
+    transform: scale(0.7); /* Scale down other boxes */
+    opacity: 0.5; /* Semi-transparent for other boxes */
+}
+
+/* Positioning for the corner boxes */
+.About .top-left {
+    top: 80px; /* Distance from top */
+    left: 100px; /* Distance from left */
+}
+
+.About .top-right {
+    top: 80px; /* Distance from top */
+    right: 100px; /* Distance from right */
+}
+
+.About .bottom-left {
+    bottom: 80px; /* Distance from bottom */
+    left: 100px; /* Distance from left */
+}
+
+.About .bottom-right {
+    bottom: 80px; /* Distance from bottom */
+    right: 100px; /* Distance from right */
+}
+
+.About img {
+    height: auto;
+    width: 100%;
+}
+
+.about-text {
+    width: 100%;
+    padding-left: -900px; /* Adjust as needed */
+}
+
+.main {
+    position: relative;
+    z-index: 1; /* Ensures the content is above the boxes */
+}
+
+.about-text h2 {
+    color: aliceblue;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    margin-left: 340px;
+}
+
+
+.about-text h5 {
+    color: #eee;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-text p {
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* Institutes Section */
+.Institutes {
+    background: #f9004d;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.title h2 {
+    color: #000000;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    padding-left: 250px;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Institutes {
+    position: relative;
+}
+
+.title h2 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Basic styling for carousel items */
+.carousel-inner .card {
+    border-radius: 10px; /* Initial border radius */
+    transition: transform 0.3s ease, border-radius 0.3s ease; /* Smooth transition for transform and border-radius */
+}
+
+/* Basic styling for carousel items */
+.carousel-inner .card {
+    border-radius: 20px; /* Initial border radius */
+    border: 2px solid #000; /* Border color and width */
+    transition: transform 0.3s ease, border-radius 0.3s ease; /* Smooth transition for transform and border-radius */
+    overflow: hidden; /* Ensures border-radius is applied correctly */
+}
+
+/* Hover effect to increase size and change border-radius */
+.carousel-inner .card:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    border-radius: 20px; /* Maintain the border radius on hover */
+    z-index: 10; /* Bring the hovered card above the others */
+}
+
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #000000;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    flex: 0 0 auto; /* Prevent flex item from shrinking or growing */
+}
+
+.card i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: #f9004d;
+}
+
+.card .button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+.card .button:hover {
+    background-color: #f9004d;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+    transition: .4s;
+}
+
+h5 {
+    color: #9e3b3b;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.pra p {
+    color: #fcfcfc;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Adjust width as needed */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform; /* Helps with performance */
+
+}
+
+.carousel .card {
+    display: none; /* Hide all cards by default */
+}
+
+.carousel .card.active {
+    display: block; /* Show only the active card */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: translateY(-50%);
+}
+
+.carousel-control.prev {
+    left: 450px;
+}
+
+.carousel-control.next {
+    right: 32.5%;
+}
+
+/* Card styles */
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #000000;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+   
+}
+/* Map Section */
+.Map {
+    width: 100%;
+    height: 290px;
+    background: #191919;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Map p {
+    color: #fcfcfc;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1) {
+    font-size: 30px;
+    color: #fcfcfc;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p:nth-child(2) {
+    color: #fcfcfc;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.social {
+    display: flex;
+}
+
+.social a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9004d;
+    color: #ffffff;
+    border-radius: 50%;
+    margin: 22px 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.end {
+    position: absolute;
+    color: #f9004d;
+    bottom: 35px;
+    font-size: 14px;
+}
